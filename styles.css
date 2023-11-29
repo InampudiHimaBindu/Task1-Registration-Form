@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select:  none;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(90deg, #161616,#484747);
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.container::before{
+    top: -75px;
+    left: 50px;
+    background: linear-gradient(#f0f, #f00);
+    clip-path: circle(20% at 70% 65%);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container2::before{
+    top: -235px;
+    left: -500px;
+    background: linear-gradient(0deg, rgba(86,195,34,1) 0%, rgba(101,222,63,1) 46%, rgba(45,253,97,1) 100%);
+    clip-path: circle(13% at 70% 65%);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.container .card-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    min-width: 350px;
+    max-width: 450px;
+    height: auto;
+    box-shadow: 25px 25px 60px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    overflow: hidden;
+}
+
+form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    z-index: 100;
+}
+form h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+}
+label{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+input{
+    width: 100%;
+    padding:8px 5px;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 0.3em;
+    margin-bottom: 12px;
+}
+button{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 0.5em;
+    background-color: #33ac37;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #2f9132;
+}
+
+input:focus{
+    border: 1px solid #787676;
+}
+
+@media screen and (max-width: 800px) {
+    .container .card-wrapper{
+        width:auto;
+        max-width: 450px;
+    }
+}
